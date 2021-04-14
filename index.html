@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuzlocke API</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <!-- logo by Zerochan923600 on deviantart.com -->
+            <img src="./images/nuzlockeLogo.png" alt="nuzlocke logo">
+            <h1>PokeAPI Nuzlocke Run Tracker</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="info">
+            <div class="wrapper">
+                <h2>App Information</h2>
+                <p>Welcome to my Nuzlocke app made using jQuery and <a href="https://pokeapi.co/">PokeAPI!</a> Use this to keep track of your available and fallen Pokemon in your nuzlocke playthroughs. Enter the Pokemon (or Pokedex ID) of your choice in the first form, and add a nickname to the second form, then submit to add a Pokemon to your roster. To choose a Pokemon from the National Pokedex, check out <a href="https://www.serebii.net/pokemon/nationalpokedex.shtml">Serebii's Pokedex here</a>. To represent your losses and provide ever-present pressure during your nuzlocke run, click on a Pokemon once it is defeated to add it to the fallen section, and click again to bring it back to your roster if you made a mistake or you just can't bear the loss.</p>
+                <h2>Nuzlocke Rules</h2>
+                <p>Created by Nick Franco in his <a href="http://www.nuzlocke.com/">webcomic series</a>, the Nuzlocke challenge adds a new level of challenge for skilled Pokemon trainers. In a Nuzlocke, you can only capture the first Pokemon encountered in a route, and any Pokemon that faints cannot be used for the rest of the run. Additionally, nicknames are strongly encouraged for the sake of bonding with your Pokemon, which is why I added it as a feature to this app!</p>
+            </div>
+        </section>
+
+        <section class="nuzlockeOptions">
+            <div class="wrapper">
+                <h2>Choose your Pokemon</h2>
+                <form class="options">
+                    <label for="pokemon">Pokemon:</label><br>
+                    <input type="text" id="pokemon" name="pokemon"><br>
+                    <label for="nickname">Nickname:</label><br>
+                    <input type="text" id="nickname" name="nickname"></label><br>
+                    <input type="submit" value="submit">
+                </form>
+            </div>
+        </section>
+
+        <section class="roster">
+            <!-- contains the selected pokemon -->
+            <div class="wrapper">
+                <h2 class="status">Current Roster</h2>
+                <div id="pokemonTeam">
+                <!-- js content will be placed here -->
+                </div>
+            </div>
+        </section>
+
+        <section class="rosterFallen"></section>
+            <div class="wrapper">
+                <h2  class="status">Fallen</h2>
+                <div id="defeatedParty">
+                <!-- js content can move here -->
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="wrapper">
+            <p>Created at Juno College</p>
+            <p>Created by Paul Szadurski</p>
+            <p>Nuzlocke logo by Zerochan923600 on deviantart.com</p>
+        </div>
+    </footer>
+
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
